@@ -1,0 +1,123 @@
+.h1 {
+  color: #cadae2;
+  font-size: 36px;
+  font-weight: 400;
+
+  @media (min-width: $tablet) {
+  font-size: 70px;
+}
+}
+
+.intro__h1 {
+  letter-spacing: 5px;
+  line-height: 1.2;
+
+  @media (min-width: $tablet) {
+  max-width: 590px;
+  letter-spacing: 17px;
+  line-height: 1.8;
+}
+}
+
+.h2 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #374651;
+
+  @media (min-width: $tablet) {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+}
+
+.h2_white {
+  color: #fff;
+}
+
+.h2_line {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 5px;
+    background: $red;
+    margin-top: 10px;
+  }
+}
+
+.h2_line_white {
+  &:after {
+    background: #fff;
+  }
+}
+
+.link {
+  color: $color-link-primary;
+  text-decoration: none;
+}
+
+.link_color_white {
+  color: #fff;
+}
+
+.section__h2 {
+  margin-bottom: 40px;
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 40px;
+
+  .section__h2 {
+    margin-bottom: 0;
+  }
+}
+
+.heading__text {
+  font-size: 18px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.intro-text {
+  color: $color-intro-text;
+  font-size: 18px;
+  line-height: 1.5;
+
+  @media (min-width: $tablet) {
+    font-size: 24px;
+  }
+}
+
+.emphasis {
+  color: $color-primary;
+  font-weight: 700;
+}
+
+.list_marker_check {
+  list-style-type: none;
+  margin: 15px 0;
+
+  > li {
+    margin-bottom: 10px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &:before {
+      content: '\f058';
+      display: inline-block;
+      font-family: FontAwesome;
+      font-size: 20px;
+      line-height: 26px;
+      color: $check-color;
+      position: relative;
+      padding-right: 15px;
+    }
+  }
+}

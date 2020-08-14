@@ -1,0 +1,170 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #5c656a;
+  z-index: 1000;
+  transition: background-color linear 1s;
+}
+
+.header_bg_dark {
+  background-color: $color-primary;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 60px;
+  height: 59px;
+}
+
+.header__logo-link {
+  display: flex;
+  align-items: center;
+}
+/*--- /header ---*/
+
+/*--- menu ---*/
+.menu-button {
+  width: 35px;
+  height: 35px;
+  border: none;
+  background: transparent;
+  z-index: 1001;
+  cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+
+  &:focus {
+    outline: none;
+  }
+
+  &:before {
+    content: '';
+    width: 20px;
+    height: 1px;
+    background: $red;
+    display: block;
+    margin-bottom: 7px;
+    margin-left: auto;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+
+  &:after {
+    content: '';
+    width: 35px;
+    height: 1px;
+    background: $red;
+    display: block;
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+}
+
+.menu-button_open {
+  width: 20px;
+
+  &:before {
+    margin-bottom: 0;
+    transform: rotate(-135deg) translateX(-1px);
+  }
+
+  &:after {
+    width: 20px;
+    transform: rotate(135deg);
+  }
+}
+
+.header__nav {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  background-color: $color-primary;
+  padding: 10px 60px 10px 20px;
+  transition: left 0.5s;
+}
+
+.header__nav_visible {
+  left: 0;
+}
+
+.body_fixed {
+  overflow: hidden;
+}
+
+.nav-list {
+  list-style-type: none;
+}
+
+.nav__button {
+  margin-top: 15px;
+  margin-left: 20px;
+}
+
+@media (min-width: $desctop) {
+  .menu-button {
+    display: none;
+  }
+
+  .header__nav {
+    background-color: transparent;
+    left: 0;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    padding: 0;
+  }
+
+  .header__nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .nav__button {
+    margin-top: 0;
+  }
+}
+
+.footer__nav-list {
+  column-count: 2;
+
+  .nav-list__link {
+    padding: 5px 0;
+  }
+}
+
+.nav-list__link {
+  display: block;
+  font-size: 16px;
+  font-weight: 100;
+  color: #fff;
+  padding: 5px 20px;
+  text-decoration: none;
+}
+
+.header__nav-list {
+  .nav-list__link {
+    @media (min-width: $tablet) {
+      border-bottom: 4px solid transparent;
+    }
+
+    &:hover,
+    &:focus,
+    &.nav-list__link_active {
+      @media (max-width: $desctop - 1) {
+        color: $red!important;
+      }
+
+      @media (min-width: $desctop) {
+        border-bottom: 4px solid $red;
+      }
+    }
+  }
+}
+
+/*--- /menu ---*/

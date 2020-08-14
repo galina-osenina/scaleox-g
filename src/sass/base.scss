@@ -1,0 +1,63 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("../fonts/PTSans-Regular.ttf") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PTSans';
+  src: url("../fonts/PTSans-Bold.ttf") format("opentype");
+  font-weight: 700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'PTSans', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  background: $color-primary;
+}
+
+p {
+  padding: 10px 0;
+}
+
+a {
+  &:focus {
+    outline: none;
+  }
+}
+
+.link {
+  color: $link-color;
+  text-decoration: none;
+  
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1285px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 0 auto;
+}

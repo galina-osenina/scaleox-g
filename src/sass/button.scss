@@ -1,0 +1,59 @@
+.button {
+  display: inline-block;
+  font-size: 16px;
+  line-height: 1;
+  color: #fff;
+  text-decoration: none;
+  padding: 9px 25px 13px;
+  border: 1px solid #4b626d;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+  }
+}
+
+.button_type_arrow {
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    margin-left: 15px;
+    border: 1px solid $red;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(135deg);
+  }
+}
+
+.button_type_bg {
+  background: $red;
+  border: 1px solid $red;
+
+  &:hover,
+  &:focus {
+    background: #f17b79;
+    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2), 0 4px 5px 0 rgba(0,0,0,.14), 0 1px 10px 0 rgba(0,0,0,.12);
+  }
+}
+
+.button_color_dark {
+  color: $color-text-primary;
+  border: 1px solid #90aab6;
+
+  &:hover,
+  &:focus {
+    background: rgba(2, 2, 2, 0.1);
+  }
+}
+
+.button-more {
+  margin-top: 50px;
+}
+
+.js-more-btn_hidden {
+  display: none;
+}

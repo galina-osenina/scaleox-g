@@ -1,0 +1,117 @@
+.section.section-timeline {
+  padding-bottom: 0;
+}
+
+.section_bg_image {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background: #fcfdff url('../images/city.svg') no-repeat bottom center;
+  background-size: 100% auto;
+  padding-bottom: 115px;
+  margin-bottom: -5px;
+}
+
+.timeline-wrapper {
+  background: #eaeeef;
+}
+
+.timeline {
+  width: 220px;
+  max-width: 100%;
+  background: #eaeeef;
+  margin: 0 auto;
+  padding-top: 75px;
+  padding-bottom: 60px;
+}
+
+.event-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #90a4ae;
+  border-bottom: none;
+}
+
+.event {
+  position: relative;
+  list-style-type: none;
+  width: 100%;
+  color: #546f7a;
+  margin-left: 40px;
+  margin-bottom: 40px;
+}
+
+.event__year {
+  position: relative;
+  margin-top: 0;
+  left: auto;
+  font-size: 30px;
+  line-height: 1;
+  color: #90a4ae;
+}
+
+.event:after {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 0;
+  left: -26px;
+  width: 11px;
+  height: 11px;
+  background: $red;
+  border-radius: 50%;
+  transform: translateY(50%);
+}
+
+@media (min-width: $tablet) {
+  .timeline {
+    width: 100%;
+    padding-bottom: 115px;
+  }
+
+  .event-list {
+    flex-direction: row;
+    align-items: flex-end;
+    border-bottom: 1px solid #90a4ae;
+    border-left: none;
+  }
+
+  .event {
+    width: 130px;
+    margin-left: 0;
+    margin-bottom: 0;
+
+    &:after {
+      width: 10px;
+      height: 10px;
+      position: relative;
+      top: auto;
+      left: auto;
+    }
+    &:last-child {
+      width: 0;
+
+      &:after {
+        margin-left: -10px;
+      }
+
+      .event__year {
+        transform: translate(-100%, 100%);
+      }
+    }
+  }
+
+  .event__year {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    transform: translate(0, 100%);
+  }
+
+  .event__text {
+    margin-bottom: 10px;
+  }
+}
