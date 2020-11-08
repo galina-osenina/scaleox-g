@@ -24,6 +24,20 @@ $carousel-control-width: 380px;
   }
 }
 
+.panel {
+  display: inline-block;
+  background-color: #fff;
+  color: $color-text-primary;
+  padding: 14px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin-top: 30px;
+
+  @media (min-width: $tablet) {
+    margin-top: 0;
+  }
+}
+
 .carousel__item_active {
   .carousel__panel {
     opacity: 1;
@@ -31,49 +45,21 @@ $carousel-control-width: 380px;
   }
 
   .item__name {
-    border-left: 4px solid $color-primary;
-
-    &:after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      width: 16px;
-      height: 15px;
-      background-image: url('../images/arrow.png');
-      background-size: contain;
-      background-repeat: no-repeat;
-      margin-left: 15px;
-    }
+    font-weight: 700;
+    border-bottom: 4px solid $red;
   }
 }
 
 .item__name {
-  display: block;
+  display: inline-block;
   color: $color-text-primary;
   text-decoration: none;
-  border-left: 4px solid transparent;
-  padding: 5px 10px;
+  border-bottom: 4px solid transparent;
+  margin-bottom: 10px;
 
   &:hover,
   &:focus {
-    &:after {
-      content: '';
-      display: inline-block;
-      vertical-align: middle;
-      width: 16px;
-      height: 15px;
-      background-image: url('../images/arrow.png');
-      background-repeat: no-repeat;
-      margin-left: 15px;
-    }
-  }
-
-  @media (min-width: $tablet) {
-    width: $carousel-control-width
-  }
-
-  &:hover,
-  &:focus {
+    border-bottom: 4px solid $red;
     text-decoration: none;
   }
 }
@@ -110,6 +96,20 @@ $carousel-control-width: 380px;
 
   @media (min-width: $tablet) {
     margin-right: 50px;
+  }
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  width: 44px;
+  height: 50px;
+
+  img {
+    max-width: 30px;
+    max-height: 40px;
   }
 }
 
