@@ -98,21 +98,33 @@
   margin: 15px 0;
 
   > li {
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
 
     &:last-child {
       margin-bottom: 0;
     }
-
-    &:before {
-      content: '\f058';
-      display: inline-block;
-      font-family: FontAwesome;
-      font-size: 20px;
-      line-height: 26px;
-      color: $check-color;
-      position: relative;
-      padding-right: 15px;
-    }
   }
+}
+
+svg.hidden {
+  display: none;
+}
+
+.svg-icon {
+  width: 80px;
+  height: 80px;
+  fill: #697276;
+}
+
+.svg-icon_c1 {
+  fill: #465b65;
+}
+
+.svg-icon-list {
+  width: 30px;
+  height: 30px;
+  fill: #549a9d;
+  margin-right: 10px;
 }

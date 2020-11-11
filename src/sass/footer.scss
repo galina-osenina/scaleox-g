@@ -40,14 +40,9 @@
 
 .social__item {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   line-height: 16px;
   margin-bottom: 15px;
-}
-
-.social__icon {
-  color: #979ea0;
-  min-width: 25px;
 }
 
 .contact__link {
@@ -58,6 +53,10 @@
   &:focus {
     text-decoration: underline;
   }
+}
+
+.social {
+  list-style-type: none;
 }
 
 .social__link {
@@ -86,11 +85,6 @@
       margin-right: 0;
     }
   }
-
-  .social__icon {
-    font-size: 22px;
-    margin-right: 10px;
-  }
 }
 
 .footer__nav-list {
@@ -100,4 +94,11 @@
       text-decoration: underline;
     }
   }
+}
+
+.svg-icon-social {
+  fill: #979ea0;
+  width: 22px;
+  height: 22px;
+  margin-right: 10px;
 }

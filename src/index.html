@@ -20,6 +20,7 @@
   <body>
 
     //= html/blocks/header-dark.html
+    //= html/blocks/icon-sprite.html
 
     <main class="main main_pt">
 
@@ -33,7 +34,12 @@
         <div class="container">
           <h2 class="h2 h2_line h2_white section__h2">We can help you with?</h2>
           <div class="card-list">
-            <div class="card card_color_light card_icon_grow section__card">
+            <div class="card card_color_light section__card">
+              <div class="card__icon">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon_grow_team"></use>
+                </svg>
+              </div>
               <h3 class="card__title">
                 Grow your team
               </h3>
@@ -44,7 +50,12 @@
                 Let's Grow
               </a>
             </div>
-            <div class="card card_color_light card_icon_idea section__card">
+            <div class="card card_color_light section__card">
+              <div class="card__icon">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon_idea"></use>
+                </svg>
+              </div>
               <h3 class="card__title">
                 Build your idea
               </h3>
@@ -55,7 +66,12 @@
                 Let's Build
               </a>
             </div>
-            <div class="card card_color_light card_icon_consulting section__card">
+            <div class="card card_color_light section__card">
+              <div class="card__icon">
+                <svg class="svg-icon">
+                  <use xlink:href="#icon_consulting"></use>
+                </svg>
+              </div>
               <h3 class="card__title">
                 IT consulting
               </h3>

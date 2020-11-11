@@ -45,8 +45,8 @@ $carousel-control-width: 380px;
   }
 
   .item__name {
-    font-weight: 700;
-    border-bottom: 4px solid $red;
+    color: $red;
+    border-left: 4px solid $red;
   }
 }
 
@@ -54,12 +54,13 @@ $carousel-control-width: 380px;
   display: inline-block;
   color: $color-text-primary;
   text-decoration: none;
-  border-bottom: 4px solid transparent;
-  margin-bottom: 10px;
+  border-left: 4px solid transparent;
+  padding: 5px 10px;
 
   &:hover,
   &:focus {
-    border-bottom: 4px solid $red;
+    color: $red;
+    border-left: 4px solid $red;
     text-decoration: none;
   }
 }
