@@ -113,9 +113,9 @@ svg.hidden {
 }
 
 .svg-icon {
-  width: 80px;
-  height: 80px;
-  fill: #697276;
+  width: 60px;
+  height: 60px;
+  fill: #fff;
 }
 
 .svg-icon_c1 {
@@ -123,8 +123,9 @@ svg.hidden {
 }
 
 .svg-icon-list {
-  width: 30px;
-  height: 30px;
+  width: 18px;
+  height: 18px;
+  flex: 0 0 18px;
   fill: #549a9d;
   margin-right: 10px;
 }

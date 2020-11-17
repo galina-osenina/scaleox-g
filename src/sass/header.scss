@@ -28,53 +28,31 @@
 
 /*--- menu ---*/
 .menu-button {
-  width: 35px;
-  height: 35px;
-  border: none;
-  background: transparent;
-  z-index: 1001;
-  cursor: pointer;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-
   &:focus {
     outline: none;
   }
-
-  &:before {
-    content: '';
-    width: 20px;
-    height: 1px;
-    background: $red;
-    display: block;
-    margin-bottom: 7px;
-    margin-left: auto;
-    cursor: pointer;
-    transition: transform 0.5s;
-  }
-
-  &:after {
-    content: '';
-    width: 35px;
-    height: 1px;
-    background: $red;
-    display: block;
-    cursor: pointer;
-    transition: transform 0.5s;
-  }
 }
 
-.menu-button_open {
+.svg-icon-menu {
+  display: flex;
+  width: 35px;
+  height: 35px;
+  fill: $red;
+  stroke: $red;
+}
+
+.svg-icon-close {
   width: 20px;
+  height: 20px;
+  fill: $red;
+  stroke: $red;
+}
 
-  &:before {
-    margin-bottom: 0;
-    transform: rotate(-135deg) translateX(-1px);
-  }
-
-  &:after {
-    width: 20px;
-    transform: rotate(135deg);
-  }
+.menu-button_close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  text-decoration: none;
 }
 
 .header__nav {

@@ -1,4 +1,3 @@
-//= ../../node_modules/@fortawesome/fontawesome-free/js/all.js
 //= ../../node_modules/jquery/dist/jquery.min.js
 //= ../../node_modules/jquery-validation/dist/jquery.validate.js
 
@@ -9,7 +8,6 @@ $(function() {
   });
 
   $('.menu-button').on('click', function () {
-    $(this).toggleClass('menu-button_open');
     $('.header__nav').toggleClass('header__nav_visible');
     $('body').toggleClass('body_fixed');
   });
@@ -65,7 +63,6 @@ $(function() {
           e.preventDefault();
 
           if ($('.header__nav_visible').length) {
-              $('.menu-button').toggleClass('menu-button_open');
               $('.header__nav').toggleClass('header__nav_visible');
               $('body').toggleClass('body_fixed');
           }
