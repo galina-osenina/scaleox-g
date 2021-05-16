@@ -1,24 +1,4 @@
-.h1 {
-  color: #cadae2;
-  font-size: 36px;
-  font-weight: 400;
-
-  @media (min-width: $tablet) {
-  font-size: 70px;
-}
-}
-
-.intro__h1 {
-  letter-spacing: 5px;
-  line-height: 1.2;
-
-  @media (min-width: $tablet) {
-  max-width: 590px;
-  letter-spacing: 17px;
-  line-height: 1.8;
-}
-}
-
+.h1,
 .h2 {
   font-size: 28px;
   line-height: 1.2;
@@ -32,10 +12,30 @@
   }
 }
 
+.h1 {
+  width: 100%;
+  max-width: 590px;
+}
+
+.h1.intro__h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 400;
+  letter-spacing: 5px;
+  color: #cadae2;
+
+  @media (min-width: $tablet) {
+    font-size: 70px;
+    line-height: 1.8;
+    letter-spacing: 17px;
+  }
+}
+
 .h2_white {
   color: #fff;
 }
 
+.h1_line,
 .h2_line {
   position: relative;
 
