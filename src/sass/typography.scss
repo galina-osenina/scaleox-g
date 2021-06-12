@@ -3,7 +3,6 @@
   font-size: 28px;
   line-height: 1.2;
   font-weight: 400;
-  text-transform: uppercase;
   color: #374651;
 
   @media (min-width: $tablet) {
@@ -64,6 +63,7 @@
   color: #fff;
 }
 
+.section__h1,
 .section__h2 {
   margin-bottom: 40px;
 }
@@ -128,4 +128,10 @@ svg.hidden {
   flex: 0 0 18px;
   fill: #549a9d;
   margin-right: 10px;
+}
+
+.text-limited {
+  @media (min-width: $tablet) {
+    max-width: 50%;
+  }
 }
