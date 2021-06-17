@@ -1,33 +1,24 @@
-.h1,
-.h2 {
-  font-size: 28px;
-  line-height: 1.2;
-  font-weight: 400;
-  color: #374651;
-
-  @media (min-width: $tablet) {
-    font-size: 36px;
-    letter-spacing: 2px;
-  }
-}
-
 .h1 {
+  font-size: 36px;
+  line-height: 1.5;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: 400;
   width: 100%;
   max-width: 590px;
+  margin-top: 0;
 }
 
 .h1.intro__h1 {
-  font-size: 36px;
+  color: #cadae2;
+}
+
+.h2 {
+  font-size: 30px;
   line-height: 1.2;
   font-weight: 400;
-  letter-spacing: 5px;
-  color: #cadae2;
-
-  @media (min-width: $tablet) {
-    font-size: 70px;
-    line-height: 1.8;
-    letter-spacing: 17px;
-  }
+  letter-spacing: 2px;
+  color: #374651;
 }
 
 .h2_white {
@@ -51,6 +42,27 @@
 .h2_line_white {
   &:after {
     background: #fff;
+  }
+}
+
+.h3 {
+  position: relative;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.5;
+  margin-bottom: 45px;
+}
+
+.h3_line {
+  &:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    display: block;
+    width: 95px;
+    height: 2px;
+    background: rgba(255, 255, 255, 0.3);
   }
 }
 
@@ -108,6 +120,18 @@
   }
 }
 
+.list_marker_dot {
+  list-style-position: inside;
+
+  > li {
+    color: $red;
+
+    > span {
+      color: #fff;
+    }
+  }
+}
+
 svg.hidden {
   display: none;
 }
@@ -130,8 +154,11 @@ svg.hidden {
   margin-right: 10px;
 }
 
+.svg-icon_light {
+  fill: #e7efef;
+}
+
 .text-limited {
-  @media (min-width: $tablet) {
-    max-width: 50%;
-  }
+  width: 100%;
+  max-width: 955px;
 }

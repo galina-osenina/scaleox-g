@@ -6,11 +6,6 @@
   padding-top: 50px;
   padding-bottom: 60px;
   background: $section-bg;
-
-  @media (min-width: $desctop) {
-    padding-top: 90px;
-    padding-bottom: 90px;
-  }
 }
 
 .section_pt {
@@ -19,10 +14,7 @@
 
 .section_bg_dark {
   background: $color-primary;
-
-  p {
-    color: rgba(255, 255, 255, 0.5);
-  }
+  color: #fff;
 }
 
 .section_bg_grey {
@@ -42,10 +34,6 @@
 }
 
 .intro {
-  background: $color-primary url("../images/intro.png");
-  background-size: 415px auto;
-  background-position: 67% center;
-  background-repeat: no-repeat;
   background-color: $color-primary;
 
   @media (min-width: $desctop) {
@@ -54,13 +42,36 @@
     min-height: 620px;
     height: 619px;
   }
+
+  .container {
+    @media (min-width: $desctop) {
+      background: url("../images/intro.png");
+      background-size: 415px auto;
+      background-position: 95% 16px;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+.intro__content {
+  color: #fff;
+  width: 100%;
+  max-width: 730px;
 }
 
 .intro-img {
-  display: block;
-  width: 415px;
-  max-width: 100%;
-  margin: 0 auto 25px;
+  display: none;
+  
+  @media (min-width: $desctop) {
+    display: block;
+    width: 415px;
+    max-width: 100%;
+    margin: 0 auto 25px;
+  }
+}
+
+.intro__button {
+  margin-top: 10px;
 }
 
 /*--- stripe ---*/
@@ -69,12 +80,14 @@
   padding-bottom: 50px;
 }
 
-.stripe_bg_red {
+.section_bg_red {
   background: $red;
+  color: #fff;
 }
 
-.stripe_bg_green {
+.section_bg_green {
   background: $green;
+  color: #fff;
 }
 
 .stripe__container {
@@ -88,7 +101,6 @@
 }
 
 .stripe__text {
-  color: #fff;
   font-size: 22px;
   line-height: 1.4;
 
@@ -156,6 +168,14 @@
   margin-top: 30px;
 }
 
+.row__col {
+  margin-bottom: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
 @media (min-width: $desctop) {
   .row {
     display: flex;
@@ -163,8 +183,13 @@
     align-items: center;
   }
 
+  .row_align_start {
+    align-items: flex-start;
+  }
+
   .row__col {
     flex: 0 0 47%;
+    margin-bottom: 0;
   }
 
   .row__col_text {
@@ -174,6 +199,10 @@
   .row__col_replace {
     order: 2;
   }
+}
+
+.row_mt {
+  margin-top: 40px;
 }
 
 
@@ -186,10 +215,6 @@
 
   .section-tabs {
     padding-top: 0;
-  }
-
-  .section__h2 {
-    margin-bottom: 70px;
   }
 
   .heading {
