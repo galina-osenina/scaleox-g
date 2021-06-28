@@ -26,6 +26,12 @@
   }
 }
 
+.card_size_lg {
+  @media (min-width: $tablet) {
+    width: 45%;
+  }
+}
+
 .card__icon {
   font-size: 36px;
   margin-bottom: 20px;
