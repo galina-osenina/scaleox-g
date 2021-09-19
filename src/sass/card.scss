@@ -28,8 +28,25 @@
 
 .card_size_lg {
   @media (min-width: $tablet) {
-    width: 45%;
+    width: 48%;
   }
+}
+
+.card_size_sm {
+  @media (min-width: $tablet) {
+    width: 23%;
+  }
+
+  .card__title {
+    margin-bottom: 20px;
+  }
+}
+
+.card_bg_white {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  padding: 40px 26px;
 }
 
 .card__icon {
@@ -94,8 +111,13 @@
   }
 }
 
+.card__intro {
+  font-size: 18px;
+}
+
 .card__text {
   max-width: 100%;
+  font-size: 16px;
   margin-bottom: auto;
 }
 
@@ -113,5 +135,9 @@
   align-items: stretch;
   flex-wrap: wrap;
   margin-bottom: -50px;
+}
+
+.card-list_nomb {
+  margin-bottom: 0;
 }
 

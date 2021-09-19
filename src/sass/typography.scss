@@ -1,5 +1,5 @@
 .h1 {
-  font-size: 36px;
+  font-size: 48px;
   line-height: 1.5;
   letter-spacing: 3px;
   text-transform: uppercase;
@@ -7,6 +7,15 @@
   width: 100%;
   max-width: 590px;
   margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.h1_size_sm {
+  font-size: 36px;
+}
+
+.h1_mb_no {
+  margin-bottom: 0;
 }
 
 .h1.intro__h1 {
@@ -26,7 +35,8 @@
 }
 
 .h1_line,
-.h2_line {
+.h2_line,
+.subheading_line {
   position: relative;
 
   &:after {
@@ -105,7 +115,7 @@
   line-height: 1.5;
 
   @media (min-width: $tablet) {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
 
@@ -115,7 +125,7 @@
 
   > li {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 10px;
 
     &:last-child {
@@ -134,6 +144,64 @@
       color: #fff;
     }
   }
+}
+
+.list_marker_icon {
+  font-size: 20px;
+  line-height: 1.2;
+  list-style-type: none;
+
+  > li {
+    display: flex;
+    align-items: center;
+    break-inside: avoid-column;
+    margin-bottom: 15px;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 60px;
+      flex: 0 0 60px;
+      background: $green;
+      border-radius: 50%;
+      margin-right: 15px;
+    }
+  }
+}
+
+.list_col_2 {
+  column-count: 2;
+  column-width: 270px
+;
+}
+
+.list_color_dark {
+  > li {
+    color: $red;
+
+    > span {
+      color: $black;
+    }
+  }
+}
+
+.list_size_l {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.list-heading {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.text_size_l {
+  font-size: 18px;
+}
+
+.subheading {
+  font-size: 30px;
 }
 
 svg.hidden {
@@ -155,11 +223,20 @@ svg.hidden {
   height: 18px;
   flex: 0 0 18px;
   fill: #549a9d;
+  margin-top: 5px;
   margin-right: 10px;
 }
 
 .svg-icon_light {
   fill: #e7efef;
+}
+
+.svg-icon_red {
+  fill: $red;
+}
+
+.svg-icon_white {
+  fill: #fff;
 }
 
 .text-limited {
