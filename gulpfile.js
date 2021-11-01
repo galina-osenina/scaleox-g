@@ -38,7 +38,7 @@ exports.start = series(
   tasks.images,
   parallel(tasks.css, tasks.fonts, tasks.scripts, tasks.html),
   tasks.inject,
-  // watcher,
+  watcher,
   serve,
 );
 

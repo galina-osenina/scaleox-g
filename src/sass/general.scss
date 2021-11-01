@@ -133,7 +133,6 @@
 /*--- blockquote ---*/
 .blockquote {
   color: #fff;
-  font-size: 18px;
   border-radius: 4px;
   padding: 40px 10px;
 }
@@ -177,10 +176,6 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-}
-
-.person__name {
-  font-size: 18px;
 }
 /*--- /blockquote ---*/
 
@@ -282,4 +277,114 @@
 
 .section-map {
   margin-bottom: -8px;
+}
+
+.stages {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media (min-width: $tablet) {
+    &:not(:last-child) {
+      margin-bottom: 45px;
+    }
+  }
+}
+
+.stage {
+  flex: 0 0 100%;
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  position: relative;
+  padding-top: 30px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet) {
+    flex: 1;
+  }
+}
+
+.stage_mob_hidden {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.stage_border_no {
+  @media (min-width: $tablet) {
+    border-top: none;
+  }
+}
+
+.stage_dot:after {
+  @media (min-width: $tablet) {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -1px;
+    right: 0;
+    width: 10px;
+    height: 10px;
+    background: #737f84;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.stages_dot_left:after {
+  left: 0;
+  right: auto;
+}
+
+.stage__number {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.3);
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  background: #374750;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+}
+
+.stage__text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  color: #fff;
+  padding-right: 40px;
+}
+
+.logo-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo-list__item {
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #fff;
+  margin: 10px;
+}
+
+.breadcrumbs__item {
+  color: $blue;
+  text-decoration: none;
+
+  &:before {
+    content: '<';
+    margin-right: 3px;
+  }
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
 }

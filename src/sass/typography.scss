@@ -191,9 +191,16 @@
   font-weight: bold;
 }
 
+.list_item_mb {
+  > li {
+    margin-bottom: 20px;
+  }
+}
+
 .list-heading {
   font-size: 20px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 
 .text_size_l {
@@ -223,7 +230,7 @@ svg.hidden {
   height: 18px;
   flex: 0 0 18px;
   fill: #549a9d;
-  margin-top: 5px;
+  margin-top: 8px;
   margin-right: 10px;
 }
 

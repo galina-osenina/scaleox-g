@@ -54,6 +54,17 @@
   margin-bottom: 20px;
 }
 
+.card__icon_img {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: 70px;
+
+  img {
+    max-width: 100%;
+  }
+}
+
 .card__icon.card__icon_size_l {
   @media (min-width: $tablet) {
     font-size: 60px;
@@ -77,6 +88,11 @@
     height: 2px;
     background: rgba(255, 255, 255, 0.3);
   }
+}
+
+.card__subtitle {
+  font-size: 18px;
+  font-weight: 300;
 }
 
 .card__title_weight_m {
@@ -103,7 +119,7 @@
   }
 
   .card__title {
-    color: #465b65;
+    color: $black;
 
     &:after {
       background: #b0bec5;
@@ -112,12 +128,14 @@
 }
 
 .card__intro {
-  font-size: 18px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .card__text {
   max-width: 100%;
-  font-size: 16px;
+  font-weight: 300;
   margin-bottom: auto;
 }
 

@@ -4,6 +4,7 @@
   line-height: 1.2;
   color: #fff;
   text-decoration: none;
+  background: transparent;
   padding: 9px 25px 11px;
   border: 1px solid #4b626d;
   cursor: pointer;
@@ -55,6 +56,10 @@
   &:focus {
     background: rgba(2, 2, 2, 0.1);
   }
+}
+
+.button_color_white {
+  border: 1px solid #fff;
 }
 
 .button_mt {

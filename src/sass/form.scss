@@ -91,6 +91,7 @@
 .form__control {
   position: relative;
   width: 100%;
+  background: transparent;
   border: none;
   border-bottom: 1px solid #b3b3b3;
   border-right: 0;
@@ -100,6 +101,17 @@
   &:focus {
     outline: 0;
     border-bottom: 1px solid $form-active-color;
+  }
+}
+
+.form_white {
+  .form__control {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+
+  .form__placeholder {
+    color: #fff;
   }
 }
 
